@@ -1,0 +1,258 @@
+body {
+    background-color: #1f1f1f;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#budget-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#total-budget, #remaining-budget {
+    margin: 5px 0;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#selection-container {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.price-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.price-row h3 {
+    margin-right: 20px;
+    width: 50px;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+
+.players-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    margin-right: 240px;
+    cursor: pointer;
+}
+
+.player-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.player:hover .player-pic,
+.player.selected .player-pic {
+    border-color: green;
+}
+
+.player:hover .player-pic {
+    transform: scale(1.18);
+}
+
+.player-name, .player-stats {
+    display: none;
+    position: absolute;
+    width: 200px;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    text-align: left;
+}
+
+.player:hover .player-name {
+    display: block;
+    top: 10px;
+    left: 110%;
+}
+
+.player:hover .player-stats {
+    display: block;
+    top: 50px;
+    left: 110%;
+}
+
+#selected-players {
+    width: 200px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+}
+
+#selected-players h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#selected-players ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#selected-players li {
+    margin: 5px 0;
+}
+
+#final-screen {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.final-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#final-selected-list {
+    flex: 2;
+    margin-right: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#final-selected-list li {
+    display: flex;
+    align-items: center;
+    background-color: #3a3a3a;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: move;
+}
+
+#final-selected-list .player-number {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#final-selected-list .player-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+#final-selected-list .player-name {
+    flex-grow: 1; /* Allow name to take available space */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#final-selected-list .player-role {
+    font-weight: bold;
+    color: #ffd700;
+    margin-left: 10px;
+}
+
+.captain-selection {
+    flex: 1;
+    background-color: #3a3a3a;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.captain-selection h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.captain-selection select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #4a4a4a;
+    border-radius: 3px;
+}
+
+#play-again {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#play-again:hover {
+    background-color: green;
+    color: white;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+#final-selected-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#final-selected-list .player-number {
+    margin-right: 10px;
+}
+
+#final-selected-list .player-name {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#final-selected-list .player-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#final-selected-list .player-role {
+    font-weight: bold;
+}
